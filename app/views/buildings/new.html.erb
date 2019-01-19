@@ -1,0 +1,35 @@
+<h1>Addresses#new</h1>
+
+<%= form_with model: @building do |f| %>
+  <div>
+    <p>name</p>
+    <% f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <p>country</p>
+    <% f.label :country %>
+    <%= f.text_field :country %>
+  </div>
+
+  <div>
+    <p>prefecture</p>
+    <% f.label :prefecture %>
+    <%= f.text_field :prefecture %>
+  </div>
+
+  <div>
+    <p>city</p>
+    <% f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div>
+    <p>detail_address</p>
+    <% f.label :detail_address %>
+    <%= f.text_field :detail_address %>
+  </div>
+
+  <%= f.submit '作成' %>
+<% end %>

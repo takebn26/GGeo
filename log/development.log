@@ -1,0 +1,1676 @@
+  [1m[35m (15.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (71.1ms)[0m  [1m[35mCREATE DATABASE `GeoPra_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE DATABASE `GeoPra_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (3.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (123.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('3672390811561605210', 0)[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateBuildings (20190118003623)
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE `buildings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `country` varchar(255), `prefecture` varchar(255), `city` varchar(255), `detail_address` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190118003623_create_buildings.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (3.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190118003623')[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (2.8ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-01-18 00:40:39', '2019-01-18 00:40:39')[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('3672390811561605210')[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (73.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS `GeoPra_development`[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (4.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS `GeoPra_test`[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE DATABASE `GeoPra_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE DATABASE `GeoPra_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3672390811561605210', 0)[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateBuildings (20190118003623)
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE `buildings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `country` varchar(255), `prefecture` varchar(255), `city` varchar(255), `detail_address` varchar(255), `lat` float(24), `g` float(24), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190118003623_create_buildings.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190118003623')[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-01-18 00:47:42', '2019-01-18 00:47:42')[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('3672390811561605210')[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBuilding Create (0.5ms)[0m  [1m[32mINSERT INTO `buildings` (`country`, `prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('日本', '埼玉県', '川越市', '古谷上', '2019-01-18 00:50:47', '2019-01-18 00:50:47')[0m
+  [1m[35m (68.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBuilding Load (0.4ms)[0m  [1m[34mSELECT  `buildings`.* FROM `buildings` ORDER BY `buildings`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (26.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS `GeoPra_development`[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (4.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS `GeoPra_test`[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE DATABASE `GeoPra_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE DATABASE `GeoPra_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (29.2ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3672390811561605210', 0)[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateBuildings (20190118003623)
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE `buildings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `country` varchar(255), `prefecture` varchar(255), `city` varchar(255), `detail_address` varchar(255), `lat` float(24), `long` float(24), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190118003623_create_buildings.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190118003623')[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-01-18 00:51:30', '2019-01-18 00:51:30')[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('3672390811561605210')[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBuilding Create (0.5ms)[0m  [1m[32mINSERT INTO `buildings` (`country`, `prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('日本', '埼玉県', '川越市', '古谷上', '2019-01-18 00:52:32', '2019-01-18 00:52:32')[0m
+  [1m[35m (84.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (59.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS `GeoPra_development`[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (3.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS `GeoPra_test`[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE DATABASE `GeoPra_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE DATABASE `GeoPra_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (12.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('3672390811561605210', 0)[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateBuildings (20190118003623)
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE `buildings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `country` varchar(255), `prefecture` varchar(255), `city` varchar(255), `detail_address` varchar(255), `latitude` float(24), `longitude` float(24), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190118003623_create_buildings.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190118003623')[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-01-18 00:53:33', '2019-01-18 00:53:33')[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('3672390811561605210')[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBuilding Create (1.7ms)[0m  [1m[32mINSERT INTO `buildings` (`country`, `prefecture`, `city`, `latitude`, `longitude`, `created_at`, `updated_at`) VALUES ('日本', '埼玉県', '川越市', 35.9251145, 139.4856927, '2019-01-18 00:53:44', '2019-01-18 00:53:44')[0m
+  [1m[35m (84.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBuilding Create (0.4ms)[0m  [1m[32mINSERT INTO `buildings` (`country`, `prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('日本', '埼玉県', '川越市', '古谷上', '2019-01-18 00:54:35', '2019-01-18 00:54:35')[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBuilding Create (0.4ms)[0m  [1m[32mINSERT INTO `buildings` (`prefecture`, `city`, `detail_address`, `latitude`, `longitude`, `created_at`, `updated_at`) VALUES ('埼玉県', '川越市', '古谷上', 35.9153751, 139.5243588, '2019-01-18 00:54:51', '2019-01-18 00:54:51')[0m
+  [1m[35m (36.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBuilding Create (0.4ms)[0m  [1m[32mINSERT INTO `buildings` (`prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('川越市', '古谷上', '6083-8', '2019-01-18 00:55:57', '2019-01-18 00:55:57')[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBuilding Create (0.4ms)[0m  [1m[32mINSERT INTO `buildings` (`country`, `prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('日本', '埼玉県', '川越市', '古谷上', '2019-01-18 00:56:29', '2019-01-18 00:56:29')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBuilding Create (0.4ms)[0m  [1m[32mINSERT INTO `buildings` (`country`, `prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('日本', '埼玉県', '川越市', '古谷上', '2019-01-18 00:56:53', '2019-01-18 00:56:53')[0m
+  [1m[35m (16.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBuilding Destroy (64.9ms)[0m  [1m[31mDELETE FROM `buildings`[0m
+  [1m[36mBuilding Load (0.3ms)[0m  [1m[34mSELECT  `buildings`.* FROM `buildings` LIMIT 11[0m
+Started GET "/" for 127.0.0.1 at 2019-01-18 10:18:27 +0900
+  [1m[35m (1.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+Completed 406 Not Acceptable in 86ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (BuildingsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-18 10:18:49 +0900
+Processing by BuildingsController#index as HTML
+  Rendering buildings/index.html.erb within layouts/application
+  [1m[36mBuilding Load (1.2ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/views/buildings/index.html.erb:7
+  Rendered buildings/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 762ms (Views: 753.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-18 10:18:52 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 116ms (Views: 55.1ms | ActiveRecord: 32.6ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-18 10:19:52 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-18 10:20:13 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Q8w8VJRD3bRmQSS4lnPYqsAEvPS4WS6s8w5QEwIg1FZXDvocVRfGEv5td8zAu+9Zd/bSwUm4Q4MBBIXMTVxQg==", "building"=>{"name"=>"竹本ビル", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"川越市", "detail_address"=>"古谷上"}, "commit"=>"作成"}
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `permit' for #<BuildingsController:0x00007fbae2765990>
+Did you mean?  print):
+  
+app/controllers/buildings_controller.rb:24:in `create_params'
+app/controllers/buildings_controller.rb:12:in `create'
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-18 10:21:28 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 299ms (Views: 241.1ms | ActiveRecord: 13.1ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-18 10:21:46 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RKYEKOGfUFxbhVQ0SZRyDfH+wueYf4xEX+lSvYoIZ3vw9Q8xwpoAMsHl5XmYz1LSPyELX0+4CfDgIXnq9zWVaA==", "building"=>{"name"=>"竹本ビル", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"川越市", "detail_address"=>"古谷上"}, "commit"=>"作成"}
+Completed 500 Internal Server Error in 22304ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `permit' for #<BuildingsController:0x00007fda2ea62330>
+Did you mean?  print):
+  
+app/controllers/buildings_controller.rb:25:in `create_params'
+app/controllers/buildings_controller.rb:12:in `create'
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-18 10:22:36 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 290ms (Views: 237.5ms | ActiveRecord: 15.4ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-18 10:22:52 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G+2NhT50Qxz0B1RUhlJGkw5HrdeZVxxXS9y9f+Rq/CuvvoacHXETcm5n5RlXCWZMwJhkb06QmeP0FJYomVcOOA==", "building"=>{"name"=>"竹本ビル", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"川越市", "detail_address"=>"古谷上"}, "commit"=>"作成"}
+Unpermitted parameters: :name, :country
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:14
+  [1m[36mBuilding Create (0.9ms)[0m  [1m[32mINSERT INTO `buildings` (`prefecture`, `city`, `detail_address`, `latitude`, `longitude`, `created_at`, `updated_at`) VALUES ('埼玉県', '川越市', '古谷上', 35.9153751, 139.5243588, '2019-01-18 01:22:54', '2019-01-18 01:22:54')[0m
+  ↳ app/controllers/buildings_controller.rb:14
+  [1m[35m (89.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:14
+Redirected to 
+Completed 500 Internal Server Error in 1910ms (ActiveRecord: 90.2ms)
+
+
+  
+NoMethodError (undefined method `index_url' for #<BuildingsController:0x00007f8b18fd1d58>
+Did you mean?  index):
+  
+app/controllers/buildings_controller.rb:15:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mBuilding Destroy (53.0ms)[0m  [1m[31mDELETE FROM `buildings`[0m
+Started POST "/buildings" for 127.0.0.1 at 2019-01-18 10:23:44 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G+2NhT50Qxz0B1RUhlJGkw5HrdeZVxxXS9y9f+Rq/CuvvoacHXETcm5n5RlXCWZMwJhkb06QmeP0FJYomVcOOA==", "building"=>{"name"=>"竹本ビル", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"川越市", "detail_address"=>"古谷上"}, "commit"=>"作成"}
+Unpermitted parameters: :name, :country
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:14
+  [1m[36mBuilding Create (0.5ms)[0m  [1m[32mINSERT INTO `buildings` (`prefecture`, `city`, `detail_address`, `latitude`, `longitude`, `created_at`, `updated_at`) VALUES ('埼玉県', '川越市', '古谷上', 35.9153751, 139.5243588, '2019-01-18 01:23:45', '2019-01-18 01:23:45')[0m
+  ↳ app/controllers/buildings_controller.rb:14
+  [1m[35m (55.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:14
+Redirected to http://localhost:3000/
+Completed 200 OK in 1250ms (ActiveRecord: 67.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 10:23:45 +0900
+Processing by BuildingsController#index as HTML
+  Rendering buildings/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.8ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/views/buildings/index.html.erb:7
+  Rendered buildings/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 441ms (Views: 434.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 10:39:40 +0900
+  [1m[35m (1.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  Rendering buildings/index.html.erb within layouts/application
+  [1m[36mBuilding Load (1.0ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/views/buildings/index.html.erb:9
+  Rendered buildings/index.html.erb within layouts/application (39.7ms)
+Completed 500 Internal Server Error in 239ms (ActiveRecord: 24.2ms)
+
+
+  
+ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3558866592712511797_70315439830040'
+Started GET "/" for 127.0.0.1 at 2019-01-18 10:43:16 +0900
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  Rendering buildings/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.7ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/views/buildings/index.html.erb:9
+  Rendered buildings/index.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 373ms (Views: 336.6ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 12:31:03 +0900
+  [1m[35m (2.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  Rendering buildings/index.html.erb within layouts/application
+  [1m[36mBuilding Load (1.7ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/views/buildings/index.html.erb:9
+  Rendered buildings/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 103ms (Views: 84.3ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 12:31:04 +0900
+Processing by BuildingsController#index as HTML
+  Rendering buildings/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.5ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/views/buildings/index.html.erb:9
+  Rendered buildings/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 12:31:40 +0900
+Processing by BuildingsController#index as HTML
+  Rendering buildings/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.3ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/views/buildings/index.html.erb:9
+  Rendered buildings/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 56ms (Views: 51.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 12:31:56 +0900
+Processing by BuildingsController#index as HTML
+  Rendering buildings/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.3ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/views/buildings/index.html.erb:9
+  Rendered buildings/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 12:32:17 +0900
+Processing by BuildingsController#index as HTML
+  Rendering buildings/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.3ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/views/buildings/index.html.erb:9
+  Rendered buildings/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 58ms (Views: 54.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 12:32:32 +0900
+Processing by BuildingsController#index as HTML
+  Rendering buildings/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.3ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/views/buildings/index.html.erb:9
+  Rendered buildings/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 12:38:06 +0900
+  [1m[35m (1.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  Rendering buildings/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.5ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/views/buildings/index.html.erb:9
+  Rendered buildings/index.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 465ms (Views: 391.4ms | ActiveRecord: 52.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 12:54:04 +0900
+  [1m[35m (2.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.8ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 389ms (Views: 317.4ms | ActiveRecord: 30.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 13:00:28 +0900
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.5ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 398ms (Views: 332.2ms | ActiveRecord: 28.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 13:18:14 +0900
+  [1m[35m (3.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.7ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (2.7ms)
+Started GET "/" for 127.0.0.1 at 2019-01-18 13:18:18 +0900
+  [1m[35m (1.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.7ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 5281ms (Views: 5217.8ms | ActiveRecord: 23.8ms)
+
+
+Completed 200 OK in 1661ms (Views: 1646.2ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 13:48:08 +0900
+  [1m[35m (2.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant BuildingsController::User):
+  
+app/controllers/buildings_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2019-01-18 13:48:30 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.7ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 60ms (Views: 7.0ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 13:48:35 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.6ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 13:50:58 +0900
+  [1m[35m (3.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.5ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 65ms (Views: 10.4ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 13:51:38 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.6ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 13:51:57 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.4ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 483ms (Views: 479.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 13:57:55 +0900
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.5ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 382ms (Views: 329.8ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:03:00 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.6ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 92ms (Views: 76.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:03:02 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.9ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 74ms (Views: 67.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:03:33 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.5ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 53ms (Views: 48.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:03:40 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.4ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 117ms (Views: 113.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:04:08 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.3ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:04:30 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.3ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 80ms (Views: 77.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:08:01 +0900
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.4ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 345ms (Views: 296.2ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:10:12 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (1.1ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 82ms (Views: 75.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-18 14:10:14 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 95ms (Views: 90.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-18 14:10:32 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yKDxW70bSxpUSRxkX+QizrZPQ+WLvd8ht9QdN/iPSBOArcyK1ITi+iFdZ6MQnnaWzueLN7twQdbU1Hw1Sg2b0Q==", "building"=>{"name"=>"div", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"渋谷区", "detail_address"=>"道玄坂"}, "commit"=>"作成"}
+Unpermitted parameters: :name, :country
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:20
+  [1m[36mBuilding Create (2.5ms)[0m  [1m[32mINSERT INTO `buildings` (`prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('埼玉県', '渋谷区', '道玄坂', '2019-01-18 05:10:33', '2019-01-18 05:10:33')[0m
+  ↳ app/controllers/buildings_controller.rb:20
+  [1m[35m (55.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:20
+Redirected to http://localhost:3000/
+Completed 200 OK in 1583ms (ActiveRecord: 58.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:10:33 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (2.0ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 169ms (Views: 162.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-18 14:10:39 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 110ms (Views: 105.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-18 14:11:03 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hphKuL73GyBJGn2FKjjD0iSN7EDj2dEUUynk431gQkjOlXdp12iywDwOBkJlQpeKXCUkktMUT+MwKYXhz+KRig==", "building"=>{"name"=>"div", "country"=>"日本", "prefecture"=>"東京都", "city"=>"渋谷区", "detail_address"=>"道玄坂"}, "commit"=>"作成"}
+Unpermitted parameters: :name, :country
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:20
+  [1m[36mBuilding Create (0.4ms)[0m  [1m[32mINSERT INTO `buildings` (`prefecture`, `city`, `detail_address`, `latitude`, `longitude`, `created_at`, `updated_at`) VALUES ('東京都', '渋谷区', '道玄坂', 35.6588903, 139.6975169, '2019-01-18 05:11:04', '2019-01-18 05:11:04')[0m
+  ↳ app/controllers/buildings_controller.rb:20
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:20
+Redirected to http://localhost:3000/
+Completed 200 OK in 1264ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:11:04 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.4ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:5
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 105ms (Views: 99.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:25:20 +0900
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (1.1ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 244ms (Views: 170.8ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:26:24 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (1.0ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 127ms (Views: 121.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:26:52 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.5ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 112ms (Views: 107.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:27:04 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.6ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 93ms (Views: 88.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-18 14:28:08 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.6ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 168ms (Views: 155.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 13:39:44 +0900
+  [1m[35m (23.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/takemotohayato/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (1.0ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+Completed 500 Internal Server Error in 265ms (ActiveRecord: 30.5ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<BuildingsController:0x00007fbffbc3dc38>):
+  
+app/controllers/buildings_controller.rb:13:in `block in index'
+app/controllers/buildings_controller.rb:10:in `index'
+Started GET "/" for 127.0.0.1 at 2019-01-19 14:53:50 +0900
+  [1m[35m (3.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant BuildingsController::Gmaps4rails):
+  
+app/controllers/buildings_controller.rb:10:in `index'
+Started GET "/" for 127.0.0.1 at 2019-01-19 14:54:28 +0900
+  [1m[35m (2.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.6ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 79.2ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<BuildingsController:0x00007ffc543b6598>):
+  
+app/controllers/buildings_controller.rb:13:in `block in index'
+app/controllers/buildings_controller.rb:10:in `index'
+Started GET "/" for 127.0.0.1 at 2019-01-19 14:54:51 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.6ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4831ms (Views: 4795.9ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 14:55:00 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 123ms (Views: 116.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 14:55:29 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F5xYyWw6Tz7kx6w5E7cSPtu/CXmrwHDN3/8Mkn2K9/hfkWUYBaXm3pHT1/5czUZmoxfBq5sN7jq8/22QzwgkOg==", "building"=>{"name"=>"竹本", "country"=>"日本", "prefecture"=>"埼玉", "city"=>"川越市", "detail_address"=>"古谷上6083-8"}, "commit"=>"作成"}
+Unpermitted parameters: :name, :country
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007ffc5aa62058>):
+  
+app/models/building.rb:15:in `geocode'
+app/controllers/buildings_controller.rb:23:in `create'
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 14:55:33 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F5xYyWw6Tz7kx6w5E7cSPtu/CXmrwHDN3/8Mkn2K9/hfkWUYBaXm3pHT1/5czUZmoxfBq5sN7jq8/22QzwgkOg==", "building"=>{"name"=>"竹本", "country"=>"日本", "prefecture"=>"埼玉", "city"=>"川越市", "detail_address"=>"古谷上6083-8"}, "commit"=>"作成"}
+Unpermitted parameters: :name, :country
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007ffc54ac4ab0>):
+  
+app/models/building.rb:15:in `geocode'
+app/controllers/buildings_controller.rb:23:in `create'
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 14:56:17 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 383ms (Views: 348.9ms | ActiveRecord: 11.5ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 14:56:33 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vt2jdSImye5aimmP9BITY7+xm186SkkZxMCRcMbtOAPijqhsASOZgMDq2MIlSTO8cW5S5+2NzK17CLonu9DKEA==", "building"=>{"name"=>"竹本", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"川越市", "detail_address"=>""}, "commit"=>"作成"}
+Unpermitted parameters: :name, :country
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[36mBuilding Create (11.3ms)[0m  [1m[32mINSERT INTO `buildings` (`prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('埼玉県', '川越市', '', '2019-01-19 05:57:01', '2019-01-19 05:57:01')[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (25.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 28465ms (ActiveRecord: 37.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 14:57:01 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (1.3ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 123ms (Views: 104.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 14:57:13 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 114ms (Views: 108.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 15:05:05 +0900
+  [1m[35m (2.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xKDCoaJLzP2UTq2xhway9qGoc99actWoTRM725eOTPyMrf9wy9RlHeFa1nbIfOau2QC7DWq/S18uE1rZJQyfPg==", "building"=>{"name"=>"竹本", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"川越市", "detail_address"=>"古谷上6083-8"}, "commit"=>"作成"}
+Unpermitted parameters: :name, :country
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Started GET "/" for 127.0.0.1 at 2019-01-19 16:12:51 +0900
+  [1m[35m (12.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (1.8ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 488ms (Views: 404.0ms | ActiveRecord: 41.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 16:13:04 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.5ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 74ms (Views: 68.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 16:13:05 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.6ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 113ms (Views: 108.9ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (1.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mBuilding Destroy (96.9ms)[0m  [1m[31mDELETE FROM `buildings`[0m
+Started GET "/" for 127.0.0.1 at 2019-01-19 16:13:52 +0900
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.6ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 313ms (Views: 291.8ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 16:13:57 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 139ms (Views: 88.0ms | ActiveRecord: 34.7ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 16:14:16 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f1nt02TDkapxVSGjJsZefACxqgKcZfvNc9J8HWSG5aU3VNACDVw4SgRBWmRpvAokeBli0KyoZToQ0h0f1gQ2Zw==", "building"=>{"name"=>"竹本", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"川越市", "detail_address"=>"古谷上6083-8"}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[36mBuilding Create (6.0ms)[0m  [1m[32mINSERT INTO `buildings` (`name`, `country`, `prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('竹本', '日本', '埼玉県', '川越市', '古谷上6083-8', '2019-01-19 07:15:24', '2019-01-19 07:15:24')[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (24.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 68130ms (ActiveRecord: 30.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 16:15:53 +0900
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.6ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 434ms (Views: 396.1ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 16:15:59 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 106ms (Views: 99.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 16:16:04 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 109ms (Views: 104.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 16:16:25 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VaOByL5vlcqq8AwmdiD5W4WTy27pccda/CDNo7BiHgIdrrwZ1/A8Kt/kd+E5Wq0D/TsDvNm8Wa2fIKyhAuDNwA==", "building"=>{"name"=>"竹本", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"川越市", "detail_address"=>"古谷上"}, "commit"=>"作成"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[36mBuilding Create (1.0ms)[0m  [1m[32mINSERT INTO `buildings` (`name`, `country`, `prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('竹本', '日本', '埼玉県', '川越市', '古谷上', '2019-01-19 07:16:47', '2019-01-19 07:16:47')[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (39.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 21779ms (ActiveRecord: 40.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 16:16:53 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.5ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 326ms (Views: 289.6ms | ActiveRecord: 13.7ms)
+
+
+  [1m[35m (2.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mBuilding Destroy (55.8ms)[0m  [1m[31mDELETE FROM `buildings`[0m
+Started GET "/" for 127.0.0.1 at 2019-01-19 16:17:17 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (1.1ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 119ms (Views: 111.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 16:17:19 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 103ms (Views: 98.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 16:18:22 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JgvA6BBOB8E+/Phv4wEPStCs2LmOd0xBMiM2jAkcoq9uBv05edGuIUvog6ise1sSqAQQa7660rZRI1eOu55xbQ==", "building"=>{"name"=>"竹本", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"川越市", "detail_address"=>"古谷上6083-8"}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mBuilding Destroy (0.5ms)[0m  [1m[31mDELETE FROM `buildings`[0m
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 16:18:49 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 419ms (Views: 380.2ms | ActiveRecord: 15.3ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 16:19:01 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gqwC8bAHGPnXryuA89ctRCRL3anvK8DCj71YtSd5cAc2/wnokwJIl03Pms0ijA2b6pQUETjsRXYwdXPiWkSCFA==", "building"=>{"name"=>"日本", "country"=>"埼玉県", "prefecture"=>"川越市", "city"=>"", "detail_address"=>""}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Started GET "/" for 127.0.0.1 at 2019-01-19 16:20:48 +0900
+  [1m[35m (2.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.8ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 266ms (Views: 232.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 16:40:03 +0900
+  [1m[35m (2.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (3.7ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 465ms (Views: 414.6ms | ActiveRecord: 17.1ms)
+
+
+  [1m[36mBuilding Create (1.1ms)[0m  [1m[32mINSERT INTO `buildings` (`name`, `country`, `prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('日本', '埼玉県', '川越市', '', '', '2019-01-19 07:40:29', '2019-01-19 07:40:29')[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (37.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 1288653ms (ActiveRecord: 39.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 16:40:36 +0900
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.5ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 339ms (Views: 294.7ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 16:46:12 +0900
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (1.8ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 497ms (Views: 445.5ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 16:47:26 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 121ms (Views: 116.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 16:47:39 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fwcaSLCO/8yQ81YkqtdZWZhaU55RjPFWcxnD/0dmR4E3CieZ2RFWLOXnLePlrQ0B4PKbTGFBb6EQGaL99eSUQw==", "building"=>{"name"=>"竹本", "country"=>"埼玉", "prefecture"=>"", "city"=>"", "detail_address"=>""}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[36mBuilding Create (0.6ms)[0m  [1m[32mINSERT INTO `buildings` (`name`, `country`, `prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('竹本', '埼玉', '', '', '', '2019-01-19 07:49:01', '2019-01-19 07:49:01')[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (26.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 81949ms (ActiveRecord: 26.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 16:49:01 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.4ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 159ms (Views: 121.2ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 16:49:10 +0900
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 369ms (Views: 335.6ms | ActiveRecord: 12.3ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 16:49:21 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qXj2x8i+EoosEeMf9EuJTosHfaaTh59RZNe0oFVlyJjhdcsWoSG7alkFmNi7Md0W86+1dKNKAaYH19Wi5+cbWg==", "building"=>{"name"=>"竹本", "country"=>"埼玉", "prefecture"=>"", "city"=>"", "detail_address"=>""}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[36mBuilding Create (2.2ms)[0m  [1m[32mINSERT INTO `buildings` (`name`, `country`, `prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('竹本', '埼玉', '', '', '', '2019-01-19 07:52:18', '2019-01-19 07:52:18')[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (100.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 177752ms (ActiveRecord: 103.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 16:52:19 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.8ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 198ms (Views: 134.8ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 16:52:26 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 122ms (Views: 117.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 16:52:32 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ERXOnZ2u6a+AXEOEHmmbDcJu+lQc24nkuK0WDA/SqF9ZGPNM9DFAT/VIOENRE89VusYyhiwWFxPbrXcOvVB7nQ==", "building"=>{"name"=>"たけもと", "country"=>"", "prefecture"=>"", "city"=>"", "detail_address"=>""}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[36mBuilding Create (0.4ms)[0m  [1m[32mINSERT INTO `buildings` (`name`, `country`, `prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('たけもと', '', '', '', '', '2019-01-19 07:53:32', '2019-01-19 07:53:32')[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (87.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 59963ms (ActiveRecord: 88.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 16:53:32 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.3ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 139ms (Views: 98.1ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 16:53:37 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 109ms (Views: 104.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 16:53:42 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ORr8E3N+z5vGdBMYroq8ECWvYZAtmXKyChZBGx+1MfNxF8HCGuFme7NgaN/h8OhIXQepQh1U7EVpFiAZrTfiMQ==", "building"=>{"name"=>"たけもと", "country"=>"", "prefecture"=>"", "city"=>"", "detail_address"=>""}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[36mBuilding Create (0.5ms)[0m  [1m[32mINSERT INTO `buildings` (`name`, `country`, `prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('たけもと', '', '', '', '', '2019-01-19 08:03:01', '2019-01-19 08:03:01')[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (22.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 558613ms (ActiveRecord: 23.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 17:03:01 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.4ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 132ms (Views: 94.8ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 17:03:33 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 83ms (Views: 57.5ms | ActiveRecord: 12.5ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 17:03:56 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4P/x9uzlem/w/1tZUMtPCSJTlEuhVZlca6e3hLAKfnWo8swnhXrTj4XrIJ4fsRtRWvtcmZGYB6sIp9aGAoittw==", "building"=>{"name"=>"竹本", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"川越市", "detail_address"=>"古谷上6083-8"}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[36mBuilding Create (2.2ms)[0m  [1m[32mINSERT INTO `buildings` (`name`, `country`, `prefecture`, `city`, `detail_address`, `latitude`, `longitude`, `created_at`, `updated_at`) VALUES ('竹本', '日本', '埼玉県', '川越市', '古谷上6083-8', 35.9161423, 139.5351197, '2019-01-19 08:04:08', '2019-01-19 08:04:08')[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (15.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 11422ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 17:04:08 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (9.4ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 148ms (Views: 132.7ms | ActiveRecord: 9.4ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mBuilding Destroy (99.0ms)[0m  [1m[31mDELETE FROM `buildings`[0m
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 17:04:57 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 155ms (Views: 151.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 17:05:16 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BepbR2LNeyortWmIIyNiu8gXOdWOD3QwaK+z90JtCqBN52aWC1LSyl6hEk9sWTbjsL/xB77C6scLr9L18O/ZYg==", "building"=>{"name"=>"竹本", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"川越市", "detail_address"=>"古谷上6083-8"}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[36mBuilding Create (0.4ms)[0m  [1m[32mINSERT INTO `buildings` (`name`, `country`, `prefecture`, `city`, `detail_address`, `latitude`, `longitude`, `created_at`, `updated_at`) VALUES ('竹本', '日本', '埼玉県', '川越市', '古谷上6083-8', 35.9161423, 139.5351197, '2019-01-19 08:05:24', '2019-01-19 08:05:24')[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (35.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 8326ms (ActiveRecord: 36.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 17:05:24 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.7ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 123ms (Views: 111.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 17:56:05 +0900
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 203ms (Views: 95.9ms | ActiveRecord: 25.9ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 17:57:04 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"znjRUKHWDNiVtmoAKb/edVU86gdxYRJMg/YkDc3FLueGdeyByEmlOOCiEcdmxYotLZQi1UGsjLvg9kUPf0f9JQ==", "building"=>{"name"=>"竹本隼人", "country"=>"日本", "prefecture"=>"東京都", "city"=>"渋谷区", "detail_address"=>"道玄坂2-10-12"}, "commit"=>"作成"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms)
+
+
+  
+NameError (uninitialized constant Building::Google):
+  
+app/models/building.rb:13:in `geocode'
+app/controllers/buildings_controller.rb:23:in `create'
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 17:57:21 +0900
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 362ms (Views: 322.5ms | ActiveRecord: 14.5ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 17:57:54 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pb91t2DiIQN5/sGXXPRO7P0aaP0OQsITUl0TD0wg9/8R7H6uQ+dxbeOecNqNr24zM8WhRdmFR6ftlThYMR0F7A==", "building"=>{"name"=>"竹本隼人", "country"=>"日本", "prefecture"=>"東京都", "city"=>"渋谷区", "detail_address"=>"道玄坂2-10-12"}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[36mBuilding Create (0.7ms)[0m  [1m[32mINSERT INTO `buildings` (`name`, `country`, `prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('竹本隼人', '日本', '東京都', '渋谷区', '道玄坂2-10-12', '2019-01-19 08:57:54', '2019-01-19 08:57:54')[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (72.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 83ms (ActiveRecord: 73.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 17:57:54 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (2.2ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 102ms (Views: 84.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 17:58:12 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.4ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 205ms (Views: 154.3ms | ActiveRecord: 25.8ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 17:58:18 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 112ms (Views: 106.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 17:58:37 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AjU+wS0o7xqnLLouma4NIsurpBn11IIcrhVDDMupQu5KOAMQRLdG+tI4wenW1Fl6swNsy8UZHOvNFSIOeSuRLA==", "building"=>{"name"=>"竹本", "country"=>"日本", "prefecture"=>"東京都", "city"=>"渋谷区", "detail_address"=>"道玄坂2-10-12"}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[36mBuilding Create (0.6ms)[0m  [1m[32mINSERT INTO `buildings` (`name`, `country`, `prefecture`, `city`, `detail_address`, `created_at`, `updated_at`) VALUES ('竹本', '日本', '東京都', '渋谷区', '道玄坂2-10-12', '2019-01-19 08:59:23', '2019-01-19 08:59:23')[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (77.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 46725ms (ActiveRecord: 77.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 17:59:23 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.6ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 146ms (Views: 99.3ms | ActiveRecord: 18.0ms)
+
+
+  [1m[35m (2.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mBuilding Destroy (106.8ms)[0m  [1m[31mDELETE FROM `buildings`[0m
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 17:59:40 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 132ms (Views: 127.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 18:00:09 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6lbnVtqHWwywWM/cqCb/MjgyvpIek74vyJI2DOcaAQiiW9qHsxjy7MVMtBvnXKtqQJp2QC5eINirklcOVZjSyg==", "building"=>{"name"=>"竹本", "country"=>"日本", "prefecture"=>"東京都", "city"=>"渋谷区", "detail_address"=>"道玄坂2-10-12"}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Completed 500 Internal Server Error in 9900ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `lat' for true:TrueClass):
+  
+app/models/building.rb:15:in `geocode'
+app/controllers/buildings_controller.rb:23:in `create'
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 18:00:32 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 86ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 20:08:21 +0900
+  [1m[35m (13.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.6ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 329ms (Views: 311.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 20:08:24 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 136ms (Views: 81.9ms | ActiveRecord: 38.3ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 20:08:45 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gCKfIsoMvSPpyvDCn8NuJaGXMx3vPCyUqFRbqCltFcvXv4BnZUZuvCQLs1Nw0/ir1VwZg3j5tYjN3XdhqT7alg==", "building"=>{"name"=>"竹本", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"川越市", "detail_address"=>"古谷上6083-8"}, "commit"=>"作成"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (4.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Completed 500 Internal Server Error in 698ms (ActiveRecord: 5.0ms)
+
+
+  
+NoMethodError (undefined method `lat' for true:TrueClass):
+  
+app/models/building.rb:14:in `geocode'
+app/controllers/buildings_controller.rb:23:in `create'
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 20:09:30 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gCKfIsoMvSPpyvDCn8NuJaGXMx3vPCyUqFRbqCltFcvXv4BnZUZuvCQLs1Nw0/ir1VwZg3j5tYjN3XdhqT7alg==", "building"=>{"name"=>"竹本", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"川越市", "detail_address"=>"古谷上6083-8"}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Completed 500 Internal Server Error in 66683ms (ActiveRecord: 12.4ms)
+
+
+  
+NoMethodError (undefined method `lat' for true:TrueClass):
+  
+app/models/building.rb:15:in `geocode'
+app/controllers/buildings_controller.rb:23:in `create'
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 20:10:42 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gCKfIsoMvSPpyvDCn8NuJaGXMx3vPCyUqFRbqCltFcvXv4BnZUZuvCQLs1Nw0/ir1VwZg3j5tYjN3XdhqT7alg==", "building"=>{"name"=>"竹本", "country"=>"日本", "prefecture"=>"埼玉県", "city"=>"川越市", "detail_address"=>"古谷上6083-8"}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[36mBuilding Create (9.6ms)[0m  [1m[32mINSERT INTO `buildings` (`name`, `country`, `prefecture`, `city`, `detail_address`, `latitude`, `longitude`, `created_at`, `updated_at`) VALUES ('竹本', '日本', '埼玉県', '川越市', '古谷上6083-8', 35.9161423, 139.5351197, '2019-01-19 11:10:59', '2019-01-19 11:10:59')[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (76.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 16244ms (ActiveRecord: 97.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 20:10:59 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (1.1ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 125ms (Views: 114.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/buildings/new" for 127.0.0.1 at 2019-01-19 20:11:27 +0900
+Processing by BuildingsController#new as HTML
+  Rendering buildings/new.html.erb within layouts/application
+  Rendered buildings/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 145ms (Views: 140.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/buildings" for 127.0.0.1 at 2019-01-19 20:11:58 +0900
+Processing by BuildingsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xAitBDd7cSyQIJbHAOUxRKwKxsKdtGuzC0tAoGR/stOTlbJBmDGis13h1Vbv9afK2MHsXApx8q9uwmxp5Cx9jg==", "building"=>{"name"=>"hayato", "country"=>"日本", "prefecture"=>"東京都", "city"=>"渋谷区", "detail_address"=>"道玄坂2-10-12"}, "commit"=>"作成"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[36mBuilding Create (2.3ms)[0m  [1m[32mINSERT INTO `buildings` (`name`, `country`, `prefecture`, `city`, `detail_address`, `latitude`, `longitude`, `created_at`, `updated_at`) VALUES ('hayato', '日本', '東京都', '渋谷区', '道玄坂2-10-12', 35.6586858, 139.6977457, '2019-01-19 11:12:02', '2019-01-19 11:12:02')[0m
+  ↳ app/controllers/buildings_controller.rb:23
+  [1m[35m (58.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/buildings_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 4181ms (ActiveRecord: 61.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 20:12:02 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (2.7ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 99ms (Views: 89.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 20:13:36 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (5.2ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 150ms (Views: 140.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 20:13:44 +0900
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.6ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 370ms (Views: 323.3ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 20:14:09 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.4ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 87ms (Views: 83.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-19 20:22:19 +0900
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ vendor/bundler/ruby/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by BuildingsController#index as HTML
+  [1m[36mBuilding Load (0.5ms)[0m  [1m[34mSELECT `buildings`.* FROM `buildings`[0m
+  ↳ app/controllers/buildings_controller.rb:10
+  Rendering buildings/index.html.erb within layouts/application
+  Rendered buildings/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 134ms (Views: 96.9ms | ActiveRecord: 14.5ms)
+
+
