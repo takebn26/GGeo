@@ -14,10 +14,7 @@ ActiveRecord::Schema.define(version: 2019_01_18_003623) do
 
   create_table "buildings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.string "country"
-    t.string "prefecture"
-    t.string "city"
-    t.string "detail_address"
+    t.string "address"
     t.float "latitude"
     t.float "longitude"
     t.datetime "created_at", null: false

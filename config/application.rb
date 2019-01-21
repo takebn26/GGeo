@@ -12,5 +12,7 @@ module GeoPra
     config.eager_load_paths += %w[
       lib/app
     ].map { |path| "#{config.root}/#{path}" }
+
+    config.assets.precompile += %w[map.js]
   end
 end

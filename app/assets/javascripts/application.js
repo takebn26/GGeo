@@ -12,7 +12,7 @@
 //
 //= require rails-ujs
 //= require underscore
-//= require gmaps/google
 //= require activestorage
 //= require turbolinks
+//= stub map
 //= require_tree .

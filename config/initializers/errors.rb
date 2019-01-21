@@ -1,0 +1,1 @@
+class CSRFTokenError < StandardError; end

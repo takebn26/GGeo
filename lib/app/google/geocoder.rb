@@ -3,22 +3,32 @@ module Google
   GOOGLE_URL = 'https://maps.googleapis.com'.freeze
 
   class Geocoder
-    GEOCODER_ENDPOINT = '/maps/api/geocode/json'.freeze
+    GEOCODE_ENDPOINT = '/maps/api/geocode/json'.freeze
 
-    attr_accessor :lat, :lng
+    attr_reader :latlng, :full_address
 
-    def initialize(address)
-      @address = address
+    def initialize(place)
+      @place = place
     end
 
-    def execute
+    def geocode
       res = connection.get do |req|
-        req.url GEOCODER_ENDPOINT, parameters
+        req.url GEOCODE_ENDPOINT, address_param
       end
 
-      body_parse(res.body)
+      geocoded_parse(res.body)
 
-      self
+      yield self
+    end
+
+    def re_geocode
+      res = connection.get do |req|
+        req.url GEOCODE_ENDPOINT, latlng_param
+      end
+
+      re_geocoded_parse(res.body)
+
+      yield self
     end
 
     private
@@ -31,17 +41,31 @@ module Google
       end
     end
 
-    def parameters
-      { key: ENV['GAK'], address: @address }
+    def address_param
+      { key: ENV['GAK'], address: @place.address }
     end
 
-    def body_parse(res)
+    def latlng_param
+      {
+        key: ENV['GAK'],
+        latlng: [@place.latitude, @place.longitude].join(','),
+        language: 'ja'
+      }
+    end
+
+    def geocoded_parse(res)
       body = JSON.parse(res)
 
-      @lat = body['results'][0]['geometry']['location']['lat']
-      @lng = body['results'][0]['geometry']['location']['lng']
+      @latlng = {
+        lat: body['results'][0]['geometry']['location']['lat'],
+        lng: body['results'][0]['geometry']['location']['lng']
+      }
+    end
 
-      true
+    def re_geocoded_parse(res)
+      body = JSON.parse(res)
+
+      @full_address = body["results"][0]["formatted_address"]
     end
   end
 end
